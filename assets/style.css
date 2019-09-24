@@ -1,5 +1,9 @@
-/* CSS */
+/* css */
 
-input{
-    width: 5px; 
+span{
+    display: inline-block;
+}
+
+.gif{
+    margin-right: 5px;
 }
