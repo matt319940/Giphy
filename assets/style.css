@@ -5,5 +5,9 @@ span{
 }
 
 .gif{
-    margin-right: 5px;
+    margin: 10px 5px;
+}
+.input-group{
+    margin: 10px;
+    width: 95%;
 }

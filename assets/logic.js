@@ -1,5 +1,5 @@
 // array of strings
-var topics = ["always sunny", "dayman", "charlie day", "Sweet Dee", "Fat Mac", "Dennis Reynolds", "Frank Reynolds"];
+var topics = ["Always Sunny", "Dayman", "Charlie Day", "Sweet Dee", "Fat Mac", "Dennis Reynolds", "Frank Reynolds"];
 
 function displayButtons(){
     for(var i = 0; i < topics.length; i++){
