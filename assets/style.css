@@ -11,3 +11,12 @@ span{
     margin: 10px;
     width: 95%;
 }
+
+#images{
+    margin: 20px;
+    text-align: center;
+}
+
+#images img{
+    margin: 5px;
+}
