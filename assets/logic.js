@@ -1,6 +1,9 @@
-// array of strings
 var topics = ["Always Sunny", "Dayman", "Charlie Day", "Sweet Dee", "Fat Mac", "Dennis Reynolds", "Frank Reynolds"];
 
+$(document).on("keyup", function(event){
+    if (event.keyCode === 13)
+     $("#search").click();
+});
 function displayButtons(){
     for(var i = 0; i < topics.length; i++){
         $("#topics").append('<button type="button" class="btn btn-secondary gif">' + topics[i] + '</button>')
@@ -9,12 +12,14 @@ function displayButtons(){
 
 displayButtons();
 
-// adds searched items to the topics array
+
 $("#search").on("click", function(event){
     var input = $("#input").val();
-    topics.push(input);
-    clear();
-    displayButtons();
+    if(input !== ""){
+        topics.push(input);
+        clear();
+        displayButtons();
+    }
 });
 
 function clear(){
@@ -29,7 +34,6 @@ $(document).on("click", ".gif", function() {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-        console.log(response);
         $("#images").html("");
         var results = response.data;
         for (var i = 0; i < results.length; i++) {
